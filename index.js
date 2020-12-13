@@ -12,12 +12,13 @@ function displayResults(responseJson) {
   console.log(responseJson);
   let html = '<ul>'
   responseJson.forEach(location => {
-      html += '
+    icons(location.transportation)
+      html += `
       <li>
          <h1>${location.name}</h1>
          <p>${location.description}</p>
          <p>${location.transportation}</p>
-      </li>'
+      </li>`
   })
   html += '</ul>'
   $('.results').html(html)
