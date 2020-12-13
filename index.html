@@ -12,14 +12,19 @@
     <div class="navbar">
         <a href="#home">Home</a>
         <a href="#news">News</a>
-        <div class="dropdown">
+        <div class="dropdown" id="myDropdown">
           <button class="dropbtn">Search
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <option value='alabama'>Alabama</option>
+            
+                
+            <option value='alabama'><a href="https://covid-19-testing.github.io/locations/WA/complete.json">Alabama</a></option>
               <option value='alaska'>Alaska</option>
               <option value='arizona'>Arizona</option>
+            
+            
+          
           </div>
         </div>
       </div>
@@ -80,9 +85,21 @@
           </select>
           <input type='submit' value='submit'>
         </form>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 ts-state ts-cards">
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="results">
         </section>
     </div>
+    <footer role="contentinfo">
+        <div class="me"><p>Created by Makha Blu Wakpa</p></div>
+      </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
