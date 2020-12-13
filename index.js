@@ -33,6 +33,15 @@ function displayResults(responseJson) {
       <li>
          <h1>${location.name}</h1>
          <p>${location.description}</p>
+         <p>${location.address_1}</p>
+         <p>${location.city}</p>
+         <p>${location.state_province}</p>
+         <p>${location.postal_code}</p>
+         <p>${location.number}</p>
+         <p>${location.language}</p>
+         <p>${location.weekday}</p>
+         <p>${location.regular_schedule}</p>
+         <p>${location.city}</p>
          <p>${location.transportation}</p>
       </li>`
   })
