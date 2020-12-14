@@ -21,7 +21,48 @@ function getLocation(state) {
     .then(response => response.json())
     .then(responseJson => 
       displayResults(responseJson))
-    .catch(error => alert('Something went wrong. Try again later.'));
+    .catch(error => console.log(error));
+}
+
+function getWeekday(number) {
+  const day = {
+    1: 'Monday',
+    2: 'Tuesday',
+    3: 'Wednesday',
+    4: 'Thursday',
+    5: 'Friday',
+    6: 'Saturday',
+    7: 'Sunday',
+  }
+  return day[number]
+}
+
+function displaySchedule(array) {
+  let html = '<ul class="schedule">'
+  array.forEach(weekday => {
+    html += `
+      <li class="schedule-item">
+        <p>${getWeekday(weekday.weekday)}</p>
+        <p>${weekday.opens_at}</p>
+        <p>${weekday.closes_at}</p>
+      </li>
+    `
+  })
+  html += '</ul>'
+  return html
+}
+
+function displayAddress(address) {
+  let html = `
+    <p>
+      ${address.address_1}<br/>
+      ${address.city}, ${address.state_province} ${address.postal_code}<br />
+      <a href="https://www.google.com/maps/place/${address.address_1}, ${address.city} ${address.state_province} ${address.postal_code}" target="_blank">
+      View on map
+      </a>
+    </p>
+  `
+  return html
 }
 
 function displayResults(responseJson) {
@@ -33,15 +74,10 @@ function displayResults(responseJson) {
       <li>
          <h1>${location.name}</h1>
          <p>${location.description}</p>
-         <p>${location.address_1}</p>
-         <p>${location.city}</p>
-         <p>${location.state_province}</p>
-         <p>${location.postal_code}</p>
-         <p>${location.number}</p>
-         <p>${location.language}</p>
-         <p>${location.weekday}</p>
-         <p>${location.regular_schedule}</p>
-         <p>${location.city}</p>
+         ${displayAddress(location.physical_address[0])}
+         <p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>
+         <p>Language: ${location.phones[0].language}</p>
+         ${displaySchedule(location.regular_schedule)}
          <p>${location.transportation}</p>
       </li>`
   })

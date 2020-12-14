@@ -154,3 +154,13 @@ footer {
   right: 10px;
   bottom: 10px;
 }
+
+.schedule-item {
+  margin: 0 15px;
+  list-style: none;
+}
+
+.schedule {
+  display: flex;
+  padding-left: 0;
+}
