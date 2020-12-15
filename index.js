@@ -16,6 +16,32 @@ window.onclick = function(e) {
   }
 }
 
+// Confirmed COVID-19 Cases in each state
+function getConfirmedCases(state) {
+  fetch(`https://github.com/energee/covid19-us-api/blob/master/docs/states.json`)
+    .then(response => response.json())
+    .then(responseJson => 
+       displayResults(responseJson))
+    .catch(error => console.log(error));
+}
+
+function displayConfirmedCases(responseJson) {
+  console.log(responseJson);
+  let html = '<ul>'
+  responseJson.forEach(location => {
+      html += `
+      <li>
+         <h1>${location.state}</h1>
+         <p>${location.state.date}</p>
+         <p>${location.state.confirmed}</p>
+         <p>${location.state.deaths}</p>
+      </li>`
+        })
+        html += '</ul>'
+        $('.results').html(html)
+      }
+
+// COVID-19 testing sites
 function getLocation(state) {
   fetch(`https://covid-19-testing.github.io/locations/${state}/complete.json`)
     .then(response => response.json())
@@ -78,12 +104,21 @@ function displayResults(responseJson) {
          <p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>
          <p>Language: ${location.phones[0].language}</p>
          ${displaySchedule(location.regular_schedule)}
-         <p>${location.transportation}</p>
-      </li>`
-  })
-  html += '</ul>'
-  $('.results').html(html)
-}
+         <p>${location.transportation}</p> 
+
+         </li>`
+        })
+        html += '</ul>'
+        $('.results').html(html)
+      }
+
+         /* 
+         ${location.physical_address[0] != null 
+          ? displayAddress(location.physical_address[0])
+          : <p>No address</p>
+         }
+         */
+     
 
 function icons(str) {
     let iconArray = str.split(',')
