@@ -33,7 +33,20 @@ fetch('https://energ.ee/covid19-us-api/states.json')
     console.log(caseObj)
   })
 //}
-  
+
+function displayCases(object) {
+  let html = '<ul class="cases">'
+  object.forEach(states => {
+    html += `
+      <li class="cases-item">
+        <p>${caseObj(formattedData['state'])}</p>
+      </li>
+    `
+  })
+  html += '</ul>'
+  return html
+}
+
 /*
  // function displayConfirmedCases(responseJson) {
   fetch('https://raw.githubusercontent.com/energee/covid19-us-api/master/docs/states.json')
