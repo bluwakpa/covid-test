@@ -110,7 +110,8 @@ header {
 }
 
 footer {
-	position: relative;
+  position: fixed;
+  bottom: 0px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: center;

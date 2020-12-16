@@ -17,6 +17,29 @@ window.onclick = function(e) {
 }
 
 // Confirmed COVID-19 Cases in each state
+// function getConfirmedCases(state) {
+fetch('https://energ.ee/covid19-us-api/states.json')
+  .then(response => response.json())
+  .then(data => {
+    // Data is available
+    console.log(data)
+  })
+//}
+  
+ // function displayConfirmedCases(responseJson) {
+  fetch('https://raw.githubusercontent.com/energee/covid19-us-api/master/docs/states.json')
+  .then(response => response.json())
+  .then(data => {
+    const formattedData = {}
+    Object.keys(data).forEach(state => {
+      formattedData[state] = data[state][data[state].length - 1]
+    })
+    // This is that formatted data
+    console.log(formattedData)
+  })
+//}
+
+ /* 
 function getConfirmedCases(state) {
   fetch(`https://github.com/energee/covid19-us-api/blob/master/docs/states.json`)
     .then(response => response.json())
@@ -40,6 +63,7 @@ function displayConfirmedCases(responseJson) {
         html += '</ul>'
         $('.results').html(html)
       }
+*/
 
 // COVID-19 testing sites
 function getLocation(state) {
