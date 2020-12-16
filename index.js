@@ -39,7 +39,7 @@ function displayCases(object) {
   object.forEach(states => {
     html += `
       <li class="cases-item">
-        <p>${caseObj(formattedData['state'])}</p>
+        <p>${caseObj(stateData['state'])}</p>
       </li>
     `
   })
