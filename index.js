@@ -22,10 +22,19 @@ fetch('https://energ.ee/covid19-us-api/states.json')
   .then(response => response.json())
   .then(data => {
     // Data is available
-    console.log(data)
+    const states = Object.keys(data)
+    const dataByState = states.map(state => ({[state]: data[state]}))
+
+    const caseObj = {}
+    dataByState.forEach(stateData => {
+      const currentState = Object.keys(stateData)[0]
+      caseObj[currentState] = stateData[currentState][stateData[currentState].length -1]
+    })
+    console.log(caseObj)
   })
 //}
   
+/*
  // function displayConfirmedCases(responseJson) {
   fetch('https://raw.githubusercontent.com/energee/covid19-us-api/master/docs/states.json')
   .then(response => response.json())
@@ -38,6 +47,8 @@ fetch('https://energ.ee/covid19-us-api/states.json')
     console.log(formattedData)
   })
 //}
+*/
+
 
  /* 
 function getConfirmedCases(state) {
