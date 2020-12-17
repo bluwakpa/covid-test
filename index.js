@@ -19,6 +19,8 @@ window.onclick = function(e) {
 }
 */
 
+// Confirmed COVID-19 Cases in each state
+// function getConfirmedCases(state) {
 let STATS = null
 function getStats() {
   fetch('https://energ.ee/covid19-us-api/states.json')
@@ -36,8 +38,6 @@ function getStates(state){
     return `${date} active cases: ${confirmed} deaths: ${deaths}`
 }
 
-// Confirmed COVID-19 Cases in each state
-// function getConfirmedCases(state) {
 fetch('https://energ.ee/covid19-us-api/states.json')
   .then(response => response.json())
   .then(data => {
@@ -116,7 +116,7 @@ function getLocation(state) {
   fetch(`https://covid-19-testing.github.io/locations/${state}/complete.json`)
     .then(response => response.json())
     .then(responseJson => 
-      displayResults(responseJson))
+      displayResults(responseJson, state))
     .catch(error => console.log(error));
 }
 

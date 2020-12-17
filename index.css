@@ -150,6 +150,31 @@ body {
   border-radius: 0 3px 3px 0;
 }
 
+/*  HTML Links */
+a:link {
+  color: #1abc9c;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -183,6 +208,7 @@ header {
     text-align: center;
 }
 
+/*
 footer {
   position: fixed;
   bottom: 0px;
@@ -193,6 +219,7 @@ footer {
 	background: rgba(26, 44, 53, 1);
 	color: #f9faf9;
 }
+*/
 
 footer p {
 	text-align: center;
@@ -200,6 +227,9 @@ footer p {
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .container-fluid {
@@ -286,6 +316,7 @@ element.style {
 	margin: 5px 10px;
 }
 
+/*
 footer a {
 	color: #f9faf9;
 }
@@ -297,6 +328,7 @@ footer a:hover {
 footer {
   height: 50px;
 }
+*/
 
 .me {
   position: absolute;
@@ -313,9 +345,10 @@ footer {
 .schedule {
   display: flex;
   padding-left: 0;
+  
 }
 
 .schedule-item {
-  margin: 0 15px;
+  margin: 0 10px;
   list-style: none;
 }
