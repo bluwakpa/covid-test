@@ -1,15 +1,19 @@
-* {
+*, ::after, ::before {
   box-sizing: border-box;
 }
 
-/* Navbar container */
+div {
+  display: block;
+}
+
+/* Navbar container 
 .navbar {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
 }
-
-/* Links inside the navbar */
+*/
+/* Links inside the navbar 
 .navbar a {
   float: left;
   font-size: 16px;
@@ -18,14 +22,14 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-
-/* The dropdown container */
+*/
+/* The dropdown container 
 .dropdown {
   float: left;
   overflow: hidden;
 }
-
-/* Dropdown button */
+*/
+/* Dropdown button 
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
@@ -33,16 +37,21 @@
   color: white;
   padding: 14px 16px;
   background-color: red;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit; 
+  margin: 0; 
 }
+*/
 
-/* Add a red background color to navbar links on hover */
+/* Important for vertical align on mobile phones */
+/* Important for vertical align on mobile phones */
+
+/* Add a red background color to navbar links on hover 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
+*/
 
-/* Dropdown content (hidden by default) */
+/* Dropdown content (hidden by default) 
 .dropdown-content {
   display: none;
   position: absolute;
@@ -51,8 +60,9 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+*/
 
-/* Links inside the dropdown */
+/* Links inside the dropdown 
 .dropdown-content a {
   float: none;
   color: black;
@@ -61,16 +71,19 @@
   display: block;
   text-align: left;
 }
+*/
 
-/* Add a grey background color to dropdown links on hover */
+/* Add a grey background color to dropdown links on hover 
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+*/
 
-/* Show the dropdown menu on hover */
+/* Show the dropdown menu on hover 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+*/
 
 body {
   background: #2a2a2b;
@@ -255,8 +268,9 @@ element.style {
   margin-bottom: 32px!important;
   border-top: 4px solid #a8d0e6!important;
   box-shadow: 0 5px 8px rgba(0,0,0,.15);
-  -webkit-box-shadow: 0 5px 8px rgba(0,0,0,.15);
-  -moz-box-shadow: 0 5px 8px rgba(0,0,0,.15);
+  box-shadow: 0 5px 8px rgba(0,0,0,.15);
+  
+  moz-box-shadow: 0 5px 8px rgba(0,0,0,.15);
   padding: 0!important;
 }
 

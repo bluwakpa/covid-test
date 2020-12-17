@@ -1,7 +1,9 @@
 'use strict';
 
+
+
 /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+toggle between hiding and showing the dropdown content 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -15,6 +17,7 @@ window.onclick = function(e) {
     }
   }
 }
+*/
 
 // Confirmed COVID-19 Cases in each state
 // function getConfirmedCases(state) {
@@ -141,12 +144,12 @@ function displayAddress(address) {
 
 function displayResults(responseJson) {
   console.log(responseJson);
-  let html = '<ul>'
+  let html = '<div class="col-12 ts-state ts-cards">'
   responseJson.forEach(location => {
     icons(location.transportation)
       html += `
-      <li>
-         <h1>${location.name}</h1>
+
+         <h2>${location.name}</h2>
          <p>${location.description}</p>
          ${displayAddress(location.physical_address[0])}
          <p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>
@@ -154,9 +157,9 @@ function displayResults(responseJson) {
          ${displaySchedule(location.regular_schedule)}
          <p>${location.transportation}</p> 
 
-         </li>`
+`
         })
-        html += '</ul>'
+        html += '</div>'
         $('.results').html(html)
       }
 
