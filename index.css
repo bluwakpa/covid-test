@@ -222,13 +222,6 @@ ul {
   max-width: 1440px!important;
 }
 
-.col-12 {
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-
 element.style {
 }
 .col-12 {
@@ -317,12 +310,12 @@ footer {
   bottom: 10px;
 }
 
-.schedule-item {
-  margin: 0 15px;
-  list-style: none;
-}
-
 .schedule {
   display: flex;
   padding-left: 0;
+}
+
+.schedule-item {
+  margin: 0 15px;
+  list-style: none;
 }

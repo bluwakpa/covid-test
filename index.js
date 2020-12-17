@@ -19,6 +19,23 @@ window.onclick = function(e) {
 }
 */
 
+let STATS = null
+function getStats() {
+  fetch('https://energ.ee/covid19-us-api/states.json')
+  .then(response => response.json())
+  .then(data => {
+      STATS = data
+    })
+}
+getStats() 
+
+function getStates(state){
+  state = state[0].toUpperCase() + state.slice(1)
+  const {date, confirmed, deaths} = STATS[state][STATS[state].length -1]
+    console.log(`${date} active cases: ${confirmed} deaths: ${deaths}`)
+    return `${date} active cases: ${confirmed} deaths: ${deaths}`
+}
+
 // Confirmed COVID-19 Cases in each state
 // function getConfirmedCases(state) {
 fetch('https://energ.ee/covid19-us-api/states.json')
@@ -37,18 +54,20 @@ fetch('https://energ.ee/covid19-us-api/states.json')
   })
 //}
 
-function displayCases(object) {
-  let html = '<ul class="cases">'
-  object.forEach(states => {
-    html += `
+/*
+function displayResults(responseJson, state) {
+  let html = getStates(state)
+  html += 
+      '<ul>'
       <li class="cases-item">
         <p>${caseObj(object['state'])}</p>
       </li>
-    `
+    
   })
   html += '</ul>'
   return html
 }
+*/
 
 /*
  // function displayConfirmedCases(responseJson) {
@@ -142,13 +161,13 @@ function displayAddress(address) {
   return html
 }
 
-function displayResults(responseJson) {
-  console.log(responseJson);
-  let html = '<div class="col-12 ts-state ts-cards">'
+function displayResults(responseJson, state) {
+  let html = getStates(state)
+  html += '<ul>'
   responseJson.forEach(location => {
     icons(location.transportation)
       html += `
-
+      <li>
          <h2>${location.name}</h2>
          <p>${location.description}</p>
          ${displayAddress(location.physical_address[0])}
@@ -156,12 +175,11 @@ function displayResults(responseJson) {
          <p>Language: ${location.phones[0].language}</p>
          ${displaySchedule(location.regular_schedule)}
          <p>${location.transportation}</p> 
-
-`
+         </li>`
         })
-        html += '</div>'
+        html += '</ul>'
         $('.results').html(html)
-      }
+}
 
          /* 
          ${location.physical_address[0] != null 
