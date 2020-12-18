@@ -96,10 +96,10 @@ function displayResults(responseJson, state) {
          <h2>${location.name}</h2>
          <p>${location.description}</p>
          ${displayAddress(location.physical_address[0])}
-         <p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number} ? ${location.phones[0].number} : " " </a></p>
-         <p>Language: ${location.phones[0].language} ? ${location.phones[0].language} : " " </p>
-         ${displaySchedule(location.regular_schedule)}  ? ${location.regular_schedule} : " "
-         <p>${location.transportation} ? ${location.transportation} : " " </p>
+         ${location.phones[0] ? `<p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>` : "" }
+         <p>Language: ${location.phones[0]} ? ${location.phones[0]} : "" </p>
+         ${displaySchedule(location.regular_schedule)}  ? ${location.regular_schedule} : ""
+         <p>${location.transportation} ? ${location.transportation} : "" </p>
          </li>`
         })
         html += '</ul>'
