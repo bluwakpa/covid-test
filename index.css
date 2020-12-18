@@ -7,7 +7,7 @@ div {
 }
 
 body {
-  background: #2a2a2b;
+  background: #19191a;
   color: #fff;
   text-align: center;
   font-family: Arial, Helvetica;
@@ -15,6 +15,10 @@ body {
 
 .big {
   font-size: 1.2em;
+}
+
+.shadow {
+
 }
 
 .square {
@@ -230,8 +234,7 @@ ul {
 .ts-cards {
   margin-bottom: 32px!important;
   border: 2px solid #00ffcc;
-  background-color: rgb(14, 14, 14);
-  ;
+  background-color: #2a2a2b;
   border-radius: 5px;
   padding-top: 20px;
   padding-left: 15px;
