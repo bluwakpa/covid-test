@@ -87,9 +87,6 @@ function displayAddress(address) {
 }
 
 function displayResults(responseJson, state) {
-  if (location.phones != null && locations.phones.length >0);
-  if (location.phones[0].language != null && locations.phones.langauge.length >0);
-  //(location.phones[0].number == null || location.phones[0].language == null || location.regular_schedule == null || location.transportation == null ) { return ""}
   let html = getStates(state)
   html += '<ul>'
   responseJson.forEach(location => {
@@ -99,15 +96,17 @@ function displayResults(responseJson, state) {
          <h2>${location.name}</h2>
          <p>${location.description}</p>
          ${displayAddress(location.physical_address[0])}
-         <p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>
-         <p>Language: ${location.phones[0].language}</p>
-         ${displaySchedule(location.regular_schedule)}
-         <p>${location.transportation}</p> 
+         <p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number} ? ${location.phones[0].number} : " " </p></a></p>
+         <p>Language: ${location.phones[0].language} ? ${location.phones[0].language} : " " </p>
+         ${displaySchedule(location.regular_schedule)}  ? ${location.regular_schedule} : " "
+         <p>${location.transportation} ? ${location.transportation} : " " </p>
          </li>`
         })
         html += '</ul>'
         $('.results').html(html)
 }
+// if (location.phones[0].language != null && locations.phones[0].langauge.length >0);
+//(location.phones[0].number == null || location.phones[0].language == null || location.regular_schedule == null || location.transportation == null ) { return ""}
      
 function icons(str) {
     let iconArray = str.split(',')
