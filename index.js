@@ -57,6 +57,7 @@ function getWeekday(number) {
 }
 
 function displaySchedule(array) {
+  if (array == null) { return ""}
   let html = '<ul class="schedule">'
   array.forEach(weekday => {
     html += `
@@ -72,6 +73,7 @@ function displaySchedule(array) {
 }
 
 function displayAddress(address) {
+  if (address == null) { return ""}
   let html = `
     <p>
       ${address.address_1}<br/>
@@ -85,6 +87,9 @@ function displayAddress(address) {
 }
 
 function displayResults(responseJson, state) {
+  if (location.phones != null && locations.phones.length >0);
+  if (location.phones[0].language != null && locations.phones.langauge.length >0);
+  //(location.phones[0].number == null || location.phones[0].language == null || location.regular_schedule == null || location.transportation == null ) { return ""}
   let html = getStates(state)
   html += '<ul>'
   responseJson.forEach(location => {
