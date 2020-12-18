@@ -133,6 +133,8 @@ function getWeekday(number) {
   return day[number]
 }
 
+$(".results").removeClass ( "glass-background" ) .addClass ( "glass-background" );
+
 function displaySchedule(array) {
   let html = '<ul class="schedule">'
   array.forEach(weekday => {

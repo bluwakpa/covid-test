@@ -72,7 +72,7 @@ body {
 }
 
 h3 {
-  color: yellow;
+  color: rgb(255, 217, 0);
 }
 
 /*  HTML Links */
@@ -153,6 +153,11 @@ footer p {
 
 .results {
 
+}
+
+.glass-background {
+  backdrop-filter: blur(10px);
+  background-color: #fff;
 }
 
 ul {
