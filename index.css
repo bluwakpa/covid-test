@@ -165,7 +165,8 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-left: 0;
+  padding-left: 5px;
+  padding-right: 5px
 }
 
 .container-fluid {
@@ -186,6 +187,15 @@ ul {
 
 .container {
   max-width: 1440px!important;
+}
+
+.box {
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  
+  display: inline-block;
+  text-align: justify;
 }
 
 .col-12 {
@@ -219,12 +229,18 @@ ul {
 
 .ts-cards {
   margin-bottom: 32px!important;
-  border-top: 4px solid #a8d0e6!important;
+  border: 2px solid #00ffcc;
+  background-color: rgb(14, 14, 14);
+  ;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   box-shadow: 0 5px 8px rgba(0,0,0,.15);
   box-shadow: 0 5px 8px rgba(0,0,0,.15);
-  
   moz-box-shadow: 0 5px 8px rgba(0,0,0,.15);
   padding: 0!important;
+  backdrop-filter: blur(10px);
 }
 
 .me {

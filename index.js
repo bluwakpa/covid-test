@@ -1,24 +1,5 @@
 'use strict';
 
-
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
-    }
-  }
-}
-*/
-
 // Confirmed COVID-19 Cases in each state
 // function getConfirmedCases(state) {
 let STATS = null
@@ -52,64 +33,6 @@ fetch('https://energ.ee/covid19-us-api/states.json')
     })
     console.log(caseObj)
   })
-//}
-
-/*
-function displayResults(responseJson, state) {
-  let html = getStates(state)
-  html += 
-      '<ul>'
-      <li class="cases-item">
-        <p>${caseObj(object['state'])}</p>
-      </li>
-    
-  })
-  html += '</ul>'
-  return html
-}
-*/
-
-/*
- // function displayConfirmedCases(responseJson) {
-  fetch('https://raw.githubusercontent.com/energee/covid19-us-api/master/docs/states.json')
-  .then(response => response.json())
-  .then(data => {
-    const formattedData = {}
-    Object.keys(data).forEach(state => {
-      formattedData[state] = data[state][data[state].length - 1]
-    })
-    // This is that formatted data
-    console.log(formattedData)
-  })
-//}
-*/
-
-
- /* 
-function getConfirmedCases(state) {
-  fetch(`https://github.com/energee/covid19-us-api/blob/master/docs/states.json`)
-    .then(response => response.json())
-    .then(responseJson => 
-       displayResults(responseJson))
-    .catch(error => console.log(error));
-}
-
-function displayConfirmedCases(responseJson) {
-  console.log(responseJson);
-  let html = '<ul>'
-  responseJson.forEach(location => {
-      html += `
-      <li>
-         <h1>${location.state}</h1>
-         <p>${location.state.date}</p>
-         <p>${location.state.confirmed}</p>
-         <p>${location.state.deaths}</p>
-      </li>`
-        })
-        html += '</ul>'
-        $('.results').html(html)
-      }
-*/
 
 // COVID-19 testing sites
 function getLocation(state) {
@@ -132,8 +55,6 @@ function getWeekday(number) {
   }
   return day[number]
 }
-
-$(".results").removeClass ( "glass-background" ) .addClass ( "glass-background" );
 
 function displaySchedule(array) {
   let html = '<ul class="schedule">'
@@ -182,15 +103,7 @@ function displayResults(responseJson, state) {
         html += '</ul>'
         $('.results').html(html)
 }
-
-         /* 
-         ${location.physical_address[0] != null 
-          ? displayAddress(location.physical_address[0])
-          : <p>No address</p>
-         }
-         */
      
-
 function icons(str) {
     let iconArray = str.split(',')
     console.log(iconArray)
@@ -209,3 +122,5 @@ $(function() {
   console.log('App loaded! Waiting for submit!');
   watchForm();
 });
+
+$(".results").removeClass ( "ts-cards" ).addClass ( "ts-cards" );
