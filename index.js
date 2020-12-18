@@ -34,8 +34,8 @@ getStats()
 function getStates(state){
   state = state[0].toUpperCase() + state.slice(1)
   const {date, confirmed, deaths} = STATS[state][STATS[state].length -1]
-    console.log(`Since ${date} there has been ${confirmed} active cases and ${deaths} deaths caused by COVID-19 in ${state}.`)
-    return `Since ${date} there has been ${confirmed} active cases and ${deaths} deaths caused by COVID-19 in ${state}.`
+    console.log(`Since ${date} there has been ${confirmed} confirmed cases and ${deaths} deaths caused by COVID-19 in ${state}.`)
+    return `<h3> Since ${date} there has been ${confirmed} confirmed cases and ${deaths} deaths caused by COVID-19 in ${state}.</h3>`
 }
 
 fetch('https://energ.ee/covid19-us-api/states.json')
