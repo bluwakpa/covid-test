@@ -1,8 +1,8 @@
 # covid-test
 COVID-19 Testing Locations
 
-![Screenshot](screen0.png)
-![Screenshot](screen1.png)
+![Screenshot](images/screen0.png)
+![Screenshot](images/screen1.png)
 
 The app provides users critical information for COVID-19 testing sites in their state, including:
 -current statistics
