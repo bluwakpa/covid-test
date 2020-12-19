@@ -1,7 +1,6 @@
 'use strict';
 
 // Confirmed COVID-19 Cases in each state
-// function getConfirmedCases(state) {
 let STATS = null
 let START = $('.start')
 function getStats() {
@@ -28,13 +27,11 @@ fetch('https://energ.ee/covid19-us-api/states.json')
     // Data is available
     const states = Object.keys(data)
     const dataByState = states.map(state => ({[state]: data[state]}))
-
     const caseObj = {}
     dataByState.forEach(stateData => {
       const currentState = Object.keys(stateData)[0]
       caseObj[currentState] = stateData[currentState][stateData[currentState].length -1]
     })
-    // console.log(caseObj)
   })
 
 // COVID-19 testing sites
@@ -99,7 +96,6 @@ function displayResults(responseJson=[], state='') {
   let html = getStates(state)
   html += '<ul>'
   responseJson.forEach(location => {
-    // icons(location.transportation)
       html += `
       <li>
          <h2>${location.name}</h2>
@@ -114,9 +110,7 @@ function displayResults(responseJson=[], state='') {
         html += '</ul>'
         $('.results').html(html) 
 }
-// if (location.phones[0].language != null && locations.phones[0].langauge.length >0);
-//(location.phones[0].number == null || location.phones[0].language == null || location.regular_schedule == null || location.transportation == null ) { return ""}
-     
+   
 function icons(str) {
     let obj = {
       Car: "🚗",
