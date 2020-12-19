@@ -91,6 +91,7 @@ function displayResults(responseJson, state) {
   html += '<ul>'
   responseJson.forEach(location => {
     icons(location.transportation)
+    if(location || locations.phones || location.phones.length > 0 ) { /* do lines 94-105 like you currently are*/}
       html += `
       <li>
          <h2>${location.name}</h2>
@@ -98,6 +99,7 @@ function displayResults(responseJson, state) {
          ${displayAddress(location.physical_address[0])}
          ${location.phones[0] ? `<p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>` : "" }
          <p>Language: ${location.phones[0].language ? location.phones[0].language : ""} </p>
+         
          ${location.regular_schedule ? displaySchedule(location.regular_schedule) : ""}
          <p>${location.transportation ? location.transportation : ""}</p>
          </li>`
