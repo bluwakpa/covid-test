@@ -1,5 +1,4 @@
-# covid-test
-COVID-19 Testing Locations
+# COVID-19 Testing Locations
 
 ![Screenshot](images/screen0.png)
 ![Screenshot](images/screen1.png)
