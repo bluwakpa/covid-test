@@ -97,7 +97,7 @@ function displayResults(responseJson, state) {
          <p>${location.description}</p>
          ${displayAddress(location.physical_address[0])}
          ${location.phones[0] ? `<p>Telephone number: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>` : "" }
-         <p>Language: ${location.phones.language ? location.phones.language : ""} </p>
+         <p>Language: ${location.phones[0].language ? location.phones[0].language : ""} </p>
          ${location.regular_schedule ? displaySchedule(location.regular_schedule) : ""}
          <p>${location.transportation ? location.transportation : ""}</p>
          </li>`
