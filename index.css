@@ -155,8 +155,8 @@ footer p {
 }
 */
 
-.results {
-
+.results li {
+ /* margin: 0 auto; */
 }
 
 .glass-background {
@@ -170,7 +170,8 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   padding-left: 5px;
-  padding-right: 5px
+  padding-right: 5px;
+  justify-content: center;
 }
 
 .container-fluid {
@@ -283,4 +284,10 @@ footer {
 .schedule-item {
   margin: 0 10px;
   list-style: none;
+}
+
+.description {
+  max-width: 65%;
+  margin: 0 auto;
+  text-align: left;
 }
