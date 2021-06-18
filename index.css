@@ -53,8 +53,8 @@ body {
   pointer-events: none;
 }
 
-.custom-dropdown::after { /*  Custom dropdown arrow */
-  content: "\25BC";
+.custom-dropdown::after {
+  /* content: "\25BC"; */
   height: 1em;
   font-size: .625em;
   line-height: 1;
@@ -69,6 +69,10 @@ body {
   top: 0;
   bottom: 0;
   border-radius: 0 3px 3px 0;
+}
+
+.yellow {
+  color: rgb(255, 217, 0);
 }
 
 h3 {

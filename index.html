@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COVID-19 Test Locations</title>
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>COVID-19 Test Locations</title>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
   <section>
-    
-  <h1 class='shadow'>COVID-19 Testing Locations</h1>
+
+    <h1 class='shadow'>COVID-19 Testing Locations</h1>
 
 
-</section>
-
-    <div class="container">
-        <h3>Select State Data and Testing Sites</h3>
-<main class="container-fluid">
-  
-
-        <span class="custom-dropdown big">
-          <select>
-            <option value=""> Search </option>
-              <option value='alabama'>Alabama</option>
-              <option value='alaska'>Alaska</option>
-              <option value='arizona'>Arizona</option>
-              <option value='arkansas'>Arkansas</option>
-              <option value='california'>California</option>
-              <option value='colorado'>Colorado</option>
-              <option value='connecticut'>Connecticut</option>
-              <option value='delaware'>Delaware</option>
-              <option value='florida'>Florida</option>
-              <option value='georgia'>Georgia</option>
-              <option value='hawaii'>Hawaii</option>
-              <option value='idaho'>Idaho</option>
-              <option value='illinois'>Illinois</option>
-              <option value='indiana'>Indiana</option>
-              <option value='iowa'>Iowa</option>
-              <option value='kansas'>Kansas</option>
-              <option value='kentucky'>Kentucky</option>
-              <option value='louisiana'>Louisiana</option>
-              <option value='maine'>Maine</option>
-              <option value='maryland'>Maryland</option>
-              <option value='massachusetts'>Massachusetts</option>
-              <option value='michigan'>Michigan</option>
-              <option value='minnesota'>Minnesota</option>
-              <option value='mississippi'>Mississippi</option>
-              <option value='missouri'>Missouri</option>
-              <option value='montana'>Montana</option>
-              <option value='nebraska'>Nebraska</option>
-              <option value='nevada'>Nevada</option>
-              <option value='new-hampshire'>New Hampshire</option>
-              <option value='new-jersey'>New Jersey</option>
-              <option value='new-mexico'>New Mexico</option>
-              <option value='new-york'>New York</option>
-              <option value='north-carolina'>North Carolina</option>
-              <option value='north-dakota'>North Dakota</option>
-              <option value='ohio'>Ohio</option>
-              <option value='oklahoma'>Oklahoma</option>
-              <option value='oregon'>Oregon</option>
-              <option value='pennsylvania'>Pennsylvania</option>
-              <option value='rhode-island'>Rhode Island</option>
-              <option value='south-carolina'>South Carolina</option>
-              <option value='tennessee'>Tennessee</option>
-              <option value='texas'>Texas</option>
-              <option value='utah'>Utah</option>
-              <option value='vermont'>Vermont</option>
-              <option value='virginia'>Virginia</option>
-              <option value='washington'>Washington</option>
-              <option value='west-virginia'>West Virginia</option>
-              <option value='wisconsin'>Wisconsin</option>
-              <option value='wyoming'>Wyoming</option>
-          </select>
-          <!--<input type='submit' value='submit'>-->
-        </span>
-    </div>
-
-<!--State Cards-->
-<section class="results">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-
-                        <div class="col-sm-8 start">
-                          <p class="box description">With COVID-19 diagnostic testing, people who test positive and have symptoms can get care earlier. Contacts can be traced and self-isolation or quarantine started sooner to help stop the spread of the virus.</p> 
-                            <p class="box description">Thirty minutes prior to testing, be sure not to orally consume anything, including drinks, food, gum, mouthwash, medication, cigarettes, etc.</p>
-                        </div>
-                        <div class="col-sm-4">
-                          <p></p>
-                            <div class="ts-state-site__address">
-                              <p class="address"></p>
-                              <p class="address"></p>
-                                <a href="tel:"></a>
-                                <ul class="schedule">
-                                  <li class="schedule-item"></li>
-                                </ul>
-                                <p></p>
-                            </div>
-                          
-                        </div>
-
-                </div>
-            </div>
-        </div>
   </section>
-</main>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+  <div class="container">
+    <h3>Select State and Testing Sites</h3>
+    <main class="container-fluid">
+
+
+      <span class="custom-dropdown big">
+        <select>
+          <option value=""> Select your state </option>
+          <option value='alabama'>Alabama</option>
+          <option value='alaska'>Alaska</option>
+          <option value='arizona'>Arizona</option>
+          <option value='arkansas'>Arkansas</option>
+          <option value='california'>California</option>
+          <option value='colorado'>Colorado</option>
+          <option value='connecticut'>Connecticut</option>
+          <option value='delaware'>Delaware</option>
+          <option value='florida'>Florida</option>
+          <option value='georgia'>Georgia</option>
+          <option value='hawaii'>Hawaii</option>
+          <option value='idaho'>Idaho</option>
+          <option value='illinois'>Illinois</option>
+          <option value='indiana'>Indiana</option>
+          <option value='iowa'>Iowa</option>
+          <option value='kansas'>Kansas</option>
+          <option value='kentucky'>Kentucky</option>
+          <option value='louisiana'>Louisiana</option>
+          <option value='maine'>Maine</option>
+          <option value='maryland'>Maryland</option>
+          <option value='massachusetts'>Massachusetts</option>
+          <option value='michigan'>Michigan</option>
+          <option value='minnesota'>Minnesota</option>
+          <option value='mississippi'>Mississippi</option>
+          <option value='missouri'>Missouri</option>
+          <option value='montana'>Montana</option>
+          <option value='nebraska'>Nebraska</option>
+          <option value='nevada'>Nevada</option>
+          <option value='new-hampshire'>New Hampshire</option>
+          <option value='new-jersey'>New Jersey</option>
+          <option value='new-mexico'>New Mexico</option>
+          <option value='new-york'>New York</option>
+          <option value='north-carolina'>North Carolina</option>
+          <option value='north-dakota'>North Dakota</option>
+          <option value='ohio'>Ohio</option>
+          <option value='oklahoma'>Oklahoma</option>
+          <option value='oregon'>Oregon</option>
+          <option value='pennsylvania'>Pennsylvania</option>
+          <option value='rhode-island'>Rhode Island</option>
+          <option value='south-carolina'>South Carolina</option>
+          <option value='tennessee'>Tennessee</option>
+          <option value='texas'>Texas</option>
+          <option value='utah'>Utah</option>
+          <option value='vermont'>Vermont</option>
+          <option value='virginia'>Virginia</option>
+          <option value='washington'>Washington</option>
+          <option value='west-virginia'>West Virginia</option>
+          <option value='wisconsin'>Wisconsin</option>
+          <option value='wyoming'>Wyoming</option>
+        </select>
+        <!--<input type='submit' value='submit'>-->
+      </span>
+  </div>
+
+  <!--State Cards-->
+  <section class="results">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-8 start">
+            <p class="box description">With COVID-19 diagnostic testing, people who test positive and have symptoms can
+              get care earlier. Contacts can be traced and self-isolation or quarantine started sooner to help stop the
+              spread of the virus.</p>
+            <p class="box description">Thirty minutes prior to testing, be sure not to orally consume anything,
+              including drinks, food, gum, mouthwash, medication, cigarettes, etc.</p>
+          </div>
+          <div class="col-sm-4">
+            <p></p>
+            <div class="ts-state-site__address">
+              <p class="address"></p>
+              <p class="address"></p>
+              <a href="tel:"></a>
+              <ul class="schedule">
+                <li class="schedule-item"></li>
+              </ul>
+              <p></p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>

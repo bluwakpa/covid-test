@@ -101,7 +101,7 @@ function displayResults(responseJson=[], state='') {
          <h2>${location.name}</h2>
          <p class="description">${location.description}</p>
          ${displayAddress(location.physical_address[0])}
-         ${location.phones[0] ? `<p>☎️: <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>` : "" }
+         ${location.phones[0] ? `<p><i class="fas fa-mobile-alt yellow"></i> <a href="tel:${location.phones[0].number}">${location.phones[0].number}</a></p>` : "" }
          <p>Language: ${location.phones[0] ? location.phones[0].language : ""} </p>
          ${location.regular_schedule ? displaySchedule(location.regular_schedule) : ""}
          <p>${location.transportation ? icons(location.transportation) : ""}</p>
@@ -113,13 +113,13 @@ function displayResults(responseJson=[], state='') {
    
 function icons(str) {
     let obj = {
-      Car: "🚗",
-      Bus: "🚌",
-      Uber: "🚕",
-      Shuttle: "🚐",
-      "DriveThrough": "🚘",
-      Depends: "❓",
-      Train: "🚆"
+      Car: '<i class="fas fa-car yellow"></i>',
+      Bus: '<i class="fas fa-bus yellow"></i>',
+      Uber: '<i class="fas fa-taxi yellow"></i>',
+      Shuttle: '<i class="fas fa-shuttle-van yellow"></i>',
+      "DriveThrough": '<i class="fas fa-car-side yellow"></i>',
+      Depends: '<i class="fas fa-question yellow"></i>',
+      Train: '<i class="fas fa-subway yellow"></i>'
     }
     let iconArray = str.replaceAll(' ','').split(',')
 
